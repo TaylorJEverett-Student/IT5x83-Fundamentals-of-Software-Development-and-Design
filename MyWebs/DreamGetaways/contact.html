@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="image/DGicon.png">
+	<script src="js/ripple.js"></script>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+
+</head>
+<body style="margin:0px">
+
+	<div class="floatinglogo">
+		<img src="image/DGlogo.png" height="142px"></img>
+	</div>
+
+	<div class="floatingmenu" >
+		
+		<ul><li><a href="https://www.facebook.com/"><img src="image/facebook.png" width="32px" height="32px"></img></a></li></ul>
+		<ul><li><a href="https://plus.google.com/"><img src="image/googleplus.png" width="32px" height="32px"></img></a></li></ul>
+		<ul><li><a href="https://www.snapchat.com/"><img src="image/snapchat.png" width="32px" height="32px"></img></a></li></ul>
+		<ul><li><a href="https://twitter.com/twitter"><img src="image/twitter.png" width="32px" height="32px"></img></a></li></ul>
+	</div>
+
+<div class="container">
+
+<header>
+   <h1>Dream Getaways Resort</h1>
+</header>
+<center>  
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="restaurant.html">Restaurant</a></li>
+	<li><a href="extra.html">Extras</a></li>
+	<li><a href="about.html">About Us</a></li>
+	<li><a class="active" href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+</center>
+</div>
+
+<article>
+ 
+  <h2>Contact Us</h2>
+
+</article>
+  <center>
+  <p>Phone number :04 555-5555</p>
+  <p>Address : 555 Street name Suburb City Post code</p>
+  <p>Email :dreamgetaways@email.com</p>
+
+		<!--Google maps scrpit that shows map and location-->
+		<div id="googleMap" style="width:800px; height:450px;"></div>
+		<script src="http://maps.googleapis.com/maps/api/js"></script>
+	
+		<script>
+		var myCenter = new google.maps.LatLng(-41.1259918,174.8386387);
+	
+		function initialize() {
+		var mapProp = {
+			center:myCenter,
+			zoom:15,
+			mapTypeId:google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+		var marker = new google.maps.Marker({
+			position: myCenter,
+		});
+		marker.setMap(map);
+		}
+	
+	google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+</center>
+
+<footer>Copyright © Taylor J. Everett</footer>
+
+</body>
+</html>
